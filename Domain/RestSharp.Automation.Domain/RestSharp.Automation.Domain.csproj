@@ -10,8 +10,4 @@
 		<ProjectReference Include="..\..\Platform\RestSharp.Automation.Platform\RestSharp.Automation.Platform.csproj" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <Folder Include="Users\" />
-	</ItemGroup>
-
 </Project>

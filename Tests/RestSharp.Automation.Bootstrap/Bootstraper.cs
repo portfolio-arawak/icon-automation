@@ -3,7 +3,8 @@
 using Autofac;
 using Automation.Common.Environment;
 using Microsoft.Extensions.Configuration;
-
+using RestSharp.Automation.Domain.Users;
+using RestSharp.Automation.Model.Domain.Users;
 using Serilog;
 using Serilog.Events;
 
@@ -33,10 +34,10 @@ namespace RestSharp.Automation.Bootstrap
 				.SingleInstance();
 
 			// Api Clients
-			// Builder.RegisterType<PetStoreApiClient>().As<IPetStoreApiClient>().SingleInstance();
+			Builder.RegisterType<UsersApiClient>().As<IUsersApiClient>().SingleInstance();
 
 			// Logic Steps
-            // Builder.RegisterType<PetSteps>().As<IPetSteps>().InstancePerDependency();
+            Builder.RegisterType<UsersSteps>().As<IUsersSteps>().InstancePerDependency();
 
             // Logic Context
         }
