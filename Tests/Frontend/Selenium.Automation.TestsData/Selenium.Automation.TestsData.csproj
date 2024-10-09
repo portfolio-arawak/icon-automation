@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<IsPackable>false</IsPackable>
+		<OutputType>Library</OutputType>
+		<LangVersion>8</LangVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Bogus" Version="35.6.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\Model\Selenium.Automation.Model.Domain\Selenium.Automation.Model.Domain.csproj" />
+	</ItemGroup>
+
+</Project>
