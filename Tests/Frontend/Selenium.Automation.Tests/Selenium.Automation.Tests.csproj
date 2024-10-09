@@ -2,18 +2,22 @@
 
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
+		<IsPackable>false</IsPackable>
+		<OutputType>Library</OutputType>
+		<LangVersion>8</LangVersion>
 		<IsTestProject>true</IsTestProject>
 	</PropertyGroup>
 
 	<ItemGroup>
+		<PackageReference Include="ExtentReports.Core" Version="1.0.3" />
+		<PackageReference Include="Autofac" Version="8.1.0" />
 		<PackageReference Include="Autofac.Configuration" Version="7.0.0" />
 		<PackageReference Include="Autofac.Extensions.DependencyInjection" Version="10.0.0" />
-		<PackageReference Include="ExtentReports.Core" Version="1.0.3" />
-		<PackageReference Include="FluentAssertions" Version="6.12.1" />
-		<PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
 		<PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="8.0.1" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.1" />
+		<PackageReference Include="FluentAssertions" Version="6.12.1" />
 		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
-		<PackageReference Include="Serilog" Version="4.0.2" />
 		<PackageReference Include="SpecFlow" Version="3.9.74" />
 		<PackageReference Include="SpecFlow.Autofac" Version="3.9.74" />
 		<PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.9.74" />
@@ -23,27 +27,37 @@
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
+
 		<PackageReference Include="xunit.runner.visualstudio" Version="2.8.2">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 		<PackageReference Include="XunitXml.TestLogger" Version="4.0.254" />
+		<PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="129.0.6668.9100" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\RestSharp.Automation.Bootstrap\RestSharp.Automation.Bootstrap.csproj" />
-		<ProjectReference Include="..\RestSharp.Automation.TestData\RestSharp.Automation.TestData.csproj" />
+		<ProjectReference Include="..\Selenium.Automation.Tests.Bootstrap\Selenium.Automation.Tests.Bootstrap.csproj" />
+		<ProjectReference Include="..\Selenium.Automation.TestsData\Selenium.Automation.TestsData.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<Compile Update="Features\Users.Definition.cs">
-			<DependentUpon>Users.feature</DependentUpon>
-		</Compile>
-	</ItemGroup>
-
-	<ItemGroup>
-		<None Update="env.demo.json">
+		<None Update="env.chrome.int.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="runsettings.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="specflow.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="xunit.runner.json">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</None>
 	</ItemGroup>
+
+	<Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+		<Exec Command="taskkill /f /fi &quot;pid gt 0&quot; /im chromedriver.exe" />
+	</Target>
+
 </Project>

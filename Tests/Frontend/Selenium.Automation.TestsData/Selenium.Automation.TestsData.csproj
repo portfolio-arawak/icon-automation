@@ -2,6 +2,9 @@
 
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
+		<IsPackable>false</IsPackable>
+		<OutputType>Library</OutputType>
+		<LangVersion>8</LangVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -9,11 +12,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Storage\Users\" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <ProjectReference Include="..\..\..\Model\RestSharp.Automation.Model.Domain\RestSharp.Automation.Model.Domain.csproj" />
+		<ProjectReference Include="..\..\..\Model\Selenium.Automation.Model.Domain\Selenium.Automation.Model.Domain.csproj" />
 	</ItemGroup>
 
 </Project>
