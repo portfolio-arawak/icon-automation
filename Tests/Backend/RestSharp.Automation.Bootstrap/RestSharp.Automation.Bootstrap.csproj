@@ -18,8 +18,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\Domain\RestSharp.Automation.Domain\RestSharp.Automation.Domain.csproj" />
-	  <ProjectReference Include="..\..\Platform\Automation.Common\Automation.Common.csproj" />
+	  <ProjectReference Include="..\..\..\Domain\RestSharp.Automation.Domain\RestSharp.Automation.Domain.csproj" />
+	  <ProjectReference Include="..\..\..\Model\RestSharp.Automation.Model.Domain\RestSharp.Automation.Model.Domain.csproj" />
 	</ItemGroup>
 
 </Project>

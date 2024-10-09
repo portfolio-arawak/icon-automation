@@ -18,7 +18,7 @@ namespace RestSharp.Automation.Tests.Hooks
 		[ScenarioDependencies]
 		public static ContainerBuilder CreateContainerBuilder()
 		{
-			var builder = new Bootstraper();
+			var builder = new Bootstrapper();
 			builder.ConfigureServices(GetConfiguration());
 			builder.Builder.RegisterTypes(
 				typeof(TestDependencies)

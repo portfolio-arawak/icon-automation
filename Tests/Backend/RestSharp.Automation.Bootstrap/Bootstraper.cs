@@ -12,7 +12,7 @@ using Serilog.Events;
 
 namespace RestSharp.Automation.Bootstrap
 {
-	public class Bootstraper
+	public class Bootstrapper
 	{
 		private ContainerBuilder _builder;
 
