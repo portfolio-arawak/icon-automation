@@ -2,6 +2,7 @@
 
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
+		<IsTestProject>true</IsTestProject>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -32,6 +33,12 @@
 	<ItemGroup>
 		<ProjectReference Include="..\RestSharp.Automation.Bootstrap\RestSharp.Automation.Bootstrap.csproj" />
 		<ProjectReference Include="..\RestSharp.Automation.TestData\RestSharp.Automation.TestData.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="Features\Users.Definition.cs">
+			<DependentUpon>Users.feature</DependentUpon>
+		</Compile>
 	</ItemGroup>
 
 	<ItemGroup>

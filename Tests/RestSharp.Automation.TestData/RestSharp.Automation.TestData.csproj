@@ -9,7 +9,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Storage\" />
+	  <Folder Include="Storage\Users\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\Model\RestSharp.Automation.Model.Domain\RestSharp.Automation.Model.Domain.csproj" />
 	</ItemGroup>
 
 </Project>
