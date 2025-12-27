@@ -1,32 +1,90 @@
-# Prerequisites
-*.d
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
 
-# Precompiled Headers
-*.gch
-*.pch
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+# Visual Studio cache files
+# files ending in .cache can be ignored
+.[Cc]ache
+# but keep track of directories ending in .cache
+.[Cc]ache/
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+# Visual Studio 2015 cache/options directory
+.vs/
+# Uncomment if you have tasks that create the project's static files in wwwroot
+#wwwroot/
 
-# Fortran module files
-*.mod
-*.smod
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+# NUNIT
+*.VisualState.xml
+TestResult.xml
 
-# Executables
-*.exe
-*.out
-*.app
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+# TFS 2012 Local Workspace
+$tf/
+
+# Guidance Automation Toolkit
+*.gpState
+
+# ReSharper is a .NET coding add-in
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+
+# Build results
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+[Ll]ogs/
+
+# Files built by Visual Studio
+*_h.h
+*.iobj
+*.ipdb
+*_wpftmp.csproj
+*.tlog
+
+# Specflow
+*.feature.cs
+
+/*.AssemblyReference.cache
+/Domain/RestSharp.Automation.Domain/obj/Debug/netstandard2.1/RestSharp.Automation.Domain.csproj.AssemblyReference.cache
+/Domain/Selenium.Automation.Domain/obj/Debug/netstandard2.1/Selenium.Automation.Domain.csproj.AssemblyReference.cache
+/Model/RestSharp.Automation.Model.Domain/obj/Debug/netstandard2.1/RestSharp.Automation.Model.Domain.csproj.AssemblyReference.cache
+/Model/RestSharp.Automation.Model.Platform/obj/Debug/netstandard2.1/RestSharp.Automation.Model.Platform.csproj.AssemblyReference.cache
+/Model/Selenium.Automation.Model.Domain/obj/Debug/netstandard2.1/Selenium.Automation.Model.Domain.csproj.AssemblyReference.cache
+/Model/Selenium.Automation.Model.Platform/obj/Debug/netstandard2.1/Selenium.Automation.Model.Platform.csproj.AssemblyReference.cache
+/Tests/Backend/RestSharp.Automation.Tests/obj/Debug/netcoreapp3.1/RestSharp.Automation.Tests.csproj.AssemblyReference.cache
+/Tests/Backend/RestSharp.Automation.TestData/obj/Debug/netstandard2.1/RestSharp.Automation.TestData.csproj.AssemblyReference.cache
+/Tests/Backend/RestSharp.Automation.Bootstrap/obj/Debug/netstandard2.1/RestSharp.Automation.Bootstrap.csproj.AssemblyReference.cache
+/Sandbox/CSharp.Tutorials.OOP/obj/Debug/net6.0/CSharp.Tutorials.OOP.csproj.AssemblyReference.cache
+/Sandbox/CSharp.Tutorials/obj/Debug/net6.0/CSharp.Tutorials.csproj.AssemblyReference.cache
+/Platform/Selenium.Automation.Platform/obj/Debug/netstandard2.1/Selenium.Automation.Platform.csproj.AssemblyReference.cache
+/Tests/Selenium.Automation.TestsData/obj/Debug/netcoreapp3.1/Selenium.Automation.TestsData.csproj.AssemblyReference.cache
+/Tests/Selenium.Automation.Tests.Bootstrap/obj/Debug/netstandard2.1/Selenium.Automation.Tests.Bootstrap.csproj.AssemblyReference.cache
+/Tests/Selenium.Automation.Tests/obj/Debug/netcoreapp3.1/Selenium.Automation.Tests.csproj.AssemblyReference.cache
+/README.md.bak
